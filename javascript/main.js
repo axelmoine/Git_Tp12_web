@@ -1,4 +1,7 @@
- window.onload=function(){getAllId();}
+ window.onload=function(){
+    tableauId = getAllId();
+    display(tableauId);
+}
 
  function move(xId)
  {
@@ -9,8 +12,7 @@
      alert("mix");
  }
 
- function getAllId()
- {
+ function getAllId() {
     idTable = []
     counter = 0;
     for (let i = 1; i<5; i++)
@@ -19,9 +21,36 @@
         {
             truc = j+i*10;
             idTable[counter]=truc;
-            console.log(idTable[counter]);
             counter++;
         }
         
     }
+    return idTable;
 }
+
+function display(tabL) {
+    for (id in tabL)
+    {
+        var img = document.createElement("img");
+        img.src = ("./images/"+id+".jpg");
+        var block = document.getElementById(tabL[id]);
+        block.appendChild(img);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
