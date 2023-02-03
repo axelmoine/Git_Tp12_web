@@ -29,28 +29,10 @@
 }
 
 function display(tabL) {
+    posAbeille = 11;
     for (id in tabL)
     {
-        var img = document.createElement("img");
-        img.src = ("./images/"+id+".jpg");
-        var block = document.getElementById(tabL[id]);
-        block.appendChild(img);
+        document.getElementById(tabL[id]).style.backgroundImage = "url('./images/"+id+".jpg')";
+        document.getElementById(posAbeille).style.backgroundImage = "";
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
